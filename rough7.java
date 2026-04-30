@@ -49,7 +49,6 @@ class Test {
 
 /*
 Order of Execution in Java:
-
 1. Class is laoded in JVM
 2. Static Variables and Method loading
 3. Static Block loading
@@ -58,4 +57,5 @@ Order of Execution in Java:
 6. Instance Block executed
 7. Constructor executed
 8. Methods execution 
+
 */
