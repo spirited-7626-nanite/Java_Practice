@@ -1,61 +1,38 @@
-// Anatomy of a Java Class
-class Test {
+// do while and for each loop : 
 
-    // Static Variable (Class Variable)
-    static String Institute_Name = "Orchid Island";
+import java.util.Scanner;
 
-    // Instance Variables (Fields / Properties)
-    int rollNo;
-    String name;
-
-    // Static Block
-    static {
-        System.out.println("Static Block Executed");
-    }
-
-    // Instance Block
-    {
-        System.out.println("Instance Block Executed");
-    }
-
-    // Constructor
-    Test(int r, String n) {
-        rollNo = r;
-        name = n;
-    }
-
-    // Method (Behavior)
-    void display() {
-
-        int marks = 85;   // Local Variable
-
-        System.out.println("Roll No: " + rollNo);
-        System.out.println("Name: " + name);
-        System.out.println("Marks: " + marks);
-        System.out.println("Institute: " + Institute_Name);
-    }
-
-    // Main Method (Entry Point)
+class Experiment {
     public static void main(String[] args) {
 
-        int year = 2026;   // Local Variable
+        Scanner sc = new Scanner(System.in);
 
-        Test t1 = new Test(8, "Virat");
-        t1.display();
+        // Do While Loop
+        // This loop will run at least once, even if the condition is false
+        int number;
 
-        System.out.println("Year: " + year);
+        do {
+            System.out.print("Enter a number (enter 0 to stop): ");
+            number = sc.nextInt();
+
+            // Display the entered number
+            System.out.println("You entered: " + number);
+
+        } while (number != 0);  // Loop continues until user enters 0
+
+
+        // for each loop
+        // For-each loop is used to iterate through arrays or collections
+
+        int[] arr = {10, 20, 30, 40, 50};
+
+        System.out.println("Using for-each loop to print array elements:");
+
+        // 'element' will take each value from the array one by one
+        for (int element : arr) {
+            System.out.println(element);
+        }
+
+        sc.close(); // Closing scanner
     }
 }
-
-/*
-Order of Execution in Java:
-1. Class is laoded in JVM
-2. Static Variables and Method loading
-3. Static Block loading
-4. Main Method starts
-5. Object is created 
-6. Instance Block executed
-7. Constructor executed
-8. Methods execution 
-
-*/
